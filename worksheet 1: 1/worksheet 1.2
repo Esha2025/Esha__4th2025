@@ -1,0 +1,52 @@
+//Aim: Write a program that takes two strings representing numbers, converts them to wrapper classes, and performs basic arithmetic operations (addition, subtraction, multiplication, division).
+// code :
+import java.util.Scanner;
+
+public class SimpleArithmetic {
+    public static void main(String[] args) {r
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Enter the first number: ");
+        String firstInput = scanner.nextLine(); 
+        
+        System.out.print("Enter the second number: ");
+        String secondInput = scanner.nextLine(); 
+        Double firstNumber = Double.valueOf(firstInput);
+        Double secondNumber = Double.valueOf(secondInput);
+
+        
+        double addition = firstNumber + secondNumber;
+        double subtraction = firstNumber - secondNumber;
+        double multiplication = firstNumber * secondNumber;
+        double division = secondNumber != 0 ? firstNumber / secondNumber : Double.NaN; 
+
+        
+        System.out.println("Addition: " + addition);
+        System.out.println("Subtraction: " + subtraction);
+        System.out.println("Multiplication: " + multiplication);
+        System.out.println("Division: " + (secondNumber != 0 ? division : "Undefined (division by zero)"));
+
+    
+        scanner.close();
+    }
+}
+
+
+//output:
+Integer 
+Enter the first number: 10
+Enter the second number: 5
+
+Addition: 15.0
+Subtraction: 5.0
+Multiplication: 50.0
+Division: 2.0
+
+Decimal Units:
+Enter the first number: 10.5
+Enter the second number: 2.5
+
+Addition: 10.0
+Subtraction: 10.0
+Multiplication: 0.0
