@@ -1,0 +1,28 @@
+Aim:Design a program for a basic banking system that calculates the average account balance by dividing the total balance by the number of account holders and verifies transaction IDs from an array. The program should demonstrate robust exception handling using multiple try-catch blocks to manage two specific scenarios: an ArithmeticException for division by zero when there are no account holders and an ArrayIndexOutOfBoundsException for accessing invalid indices in the transaction ID array.
+code:import java.util.Scanner;
+ 
+public class BankingSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+ 
+        
+        int[] transactionIDs = {101, 102, 103, 104, 105};
+ 
+        try {
+            
+            System.out.print("Enter the total balance: ");
+            double totalBalance = scanner.nextDouble();
+ 
+            System.out.print("Enter the number of account holders: ");
+            int numOfAccountHolders = scanner.nextInt();
+ 
+            
+            double averageBalance = totalBalance / numOfAccountHolders;
+            System.out.println("Average Account Balance: " + averageBalance);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero. Number of account holders cannot be zero.");
+
+Output:Enter the total balance: 50000
+Enter the number of account holders: 5
+Average Account Balance: 10000.0
+
